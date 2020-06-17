@@ -1,0 +1,290 @@
+:root {
+  --primary-color: rgba(239, 82, 100, 1);
+  --overlay-color: rgba(114, 190, 68, 0.95);
+  --menu-speed: 0.75s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+canvas {
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.showcase {
+  margin-top: 100px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%; 
+}
+
+.showcase h1 {
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  color: var(--overlay-color);
+  font-size: 5rem;
+}
+
+.showcase h2 {
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.showcase h3 {
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  letter-spacing: 2px;
+}
+
+.showcase h3:hover {
+  background-color: var(--overlay-color);
+}
+
+.logo-img {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  display: flex;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.logo-img:hover {
+  transform: rotateY(180deg);
+}
+
+.showcase .tool h3 a{
+  font-family: "Kallisto", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+}
+
+.showcase .tool h3 a:hover{
+  color: var(--overlay-color);
+}
+
+#social-media-footer a .fa-facebook,
+#social-media-footer a .fa-instagram,
+#social-media-footer a .fa-twitter,
+#social-media-footer a .fa-linkedin {
+    color: white;
+    transition: 0.4s;
+}
+
+#social-media-footer ul {
+    list-style: none;
+    position: absolute;
+    bottom: 10px;
+    left: -15px;
+}
+
+#social-media-footer ul li {
+    font-size: 20px;
+    padding: 10px;
+    transition:0.4s;
+}
+
+#social-media-footer ul li:hover a .fa-facebook{
+    color: #3b5998;
+}
+    
+#social-media-footer ul li:hover a .fa-instagram{
+    color: #e4405f;
+}
+
+#social-media-footer ul li:hover a .fa-twitter{
+    color: #00aced;
+}
+    
+#social-media-footer ul li:hover a .fa-linkedin{
+    color: #2867B2;
+}
+
+/*
+===========
+Info Footer
+===========
+*/
+
+#info-footer a .fa-envelope,
+#info-footer a .fa-user-circle,
+#info-footer a .fa-stop-circle,
+#info-footer a .fa-volume-up {
+    color: white;
+    transition: 0.4s;
+}
+
+#info-footer {
+    list-style: none;
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    color: white;
+}
+
+#info-footer li {
+    font-size: 20px;
+    padding: 10px;
+    transition:0.4s;
+}
+
+#info-footer li:hover a .fa-envelope,
+#info-footer li:hover a .fa-user-circle, 
+#info-footer li:hover a .fa-stop-circle,
+#info-footer li:hover a .fa-volume-up{
+color: var(--primary-color);
+}
+
+#info-footer .tooltip-envelop .tooltiptext-envelop {
+  visibility: hidden;
+  width: 80px;
+  background-color: #72BE44;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  
+  border-radius: 0px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 110%;
+}
+
+#info-footer .tooltip-circle .tooltiptext-circle {
+  visibility: hidden;
+  width: 80px;
+  background-color: #72BE44;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  border-radius: 0px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 48px;
+  right: 110%;
+}
+
+#info-footer .tooltip-stop-circle .tooltiptext-stop-circle {
+  visibility: hidden;
+  width: 97px;
+  background-color: #72BE44;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  border-radius: 0px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 92px;
+  right: 110%;
+}
+
+#info-footer .tooltip-envelop .tooltiptext-envelop:after,
+#info-footer .tooltip-circle .tooltiptext-circle:after,
+#info-footer .tooltip-stop-circle .tooltiptext-stop-circle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #72BE44;
+}
+
+#info-footer .tooltip-envelop:hover .tooltiptext-envelop,
+#info-footer .tooltip-circle:hover .tooltiptext-circle,
+#info-footer .tooltip-stop-circle:hover .tooltiptext-stop-circle  {
+  visibility: visible;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: var(--primary-color);
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 90px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  position: fixed;
+  bottom: 200px;
+  left: 0px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: var(--overlay-color);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+
+@media (max-width: 719px) {
+  .showcase h1 {
+    font-size: 3rem;
+  }
+  .showcase h2 {
+    font-size: 1rem;
+  } 
+}
+
+@media(min-width:720px) and (max-width:1023px) {
+  .showcase h1 {
+    font-size: 3rem;
+  } 
+}
+
+
+
+
+
+

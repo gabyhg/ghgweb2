@@ -1,0 +1,45 @@
+:root {
+  --primary-color: rgba(239, 82, 100, 1);
+  --overlay-color: rgba(114, 190, 68, 0.95);
+  --menu-speed: 0.75s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+.logo-img {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  display: flex;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.logo-img:hover {
+  transform: rotateY(180deg);
+}
+
+.showcase h2 {
+  font-family: "Kallisto Light", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.showcase .tool h3 a{
+  font-family: "Kallisto", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+}
